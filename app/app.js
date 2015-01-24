@@ -11,12 +11,6 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
-App.ApplicationView = Ember.View.extend({
-  initFoundation: function () {
-    Ember.$(document).foundation();
-  }.on('didInsertElement')
-});
-
 loadInitializers(App, config.modulePrefix);
 
 export default App;

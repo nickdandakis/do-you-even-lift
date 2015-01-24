@@ -1,18 +1,17 @@
 <div class="clearfix text-center">
   <form id="nl-form" class="nl-form">
-    Bro,<br>
     I
-    <select>
+    <select name="lift">
       <option value="deadlift" selected>deadlift</option>
       <option value="bench">bench</option>
       <option value="squat">squat</option>
       <option value="press">press</option>
       <option value="curl">curl</option>
     </select>
-    <input type="text" value="0" placeholder="0" data-subline="trolol" />
-    <select>
-      <option value="1" selected>kg</option>
-      <option value="1">lbs</option>
+    <input type="text" name="weight" value="0" placeholder="0" />
+    <select name="unit">
+      <option value="kg" selected>kg</option>
+      <option value="lbs">lbs</option>
     </select>
     <div class="nl-submit-wrap">
       <button class="button radius" type="submit">Do I even lift?</button>
