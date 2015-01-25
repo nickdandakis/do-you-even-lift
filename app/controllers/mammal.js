@@ -12,7 +12,7 @@ var MammalController = Ember.Controller.extend({
       var result = [];
       Ember.$.each(data, function(i, val){
         if(val.weight <= weight){
-          result.push({"mammal": val.mammal});
+          result.push({"mammal": val.mammal.toLowerCase()});
           weight -= val.weight;
         }
 

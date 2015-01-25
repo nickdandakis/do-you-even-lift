@@ -2,6 +2,28 @@
 
 First play with the Ember framework. Do you even lift?
 
+Check out public/data.json to see the list of animals that power this. Scraped them off of [here](thewebsiteofeverything.com/animals/mammals/adult-weight.html) with the following script:
+
+```python
+from bs4 import BeautifulSoup
+import urllib2, json
+
+page = urllib2.urlopen('http://thewebsiteofeverything.com/animals/mammals/adult-weight.html').read()
+soup = BeautifulSoup(page)
+
+data = []
+for i, node in enumerate(soup.select("tr")):
+if(i > 5):
+mammal = node.find("a").string
+weight = int(node.findAll("td")[1].string.replace(",",""))
+data.append({"mammal": mammal, "weight": weight})
+
+with open('data.json', 'w') as outfile:
+json.dump(data, outfile)
+```
+
+This is purely to learn Ember and shipping an MVP, so it'll always be a public work in progress.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -14,8 +36,6 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
 * `npm install`
 * `bower install`
 
@@ -37,10 +57,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
