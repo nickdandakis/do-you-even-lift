@@ -40,15 +40,16 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = './';
-    ENV.baseURL = '/do-you-even-lift/dist/';
+    // ENV.rootURL = './';
+    // ENV.baseURL = '/do-you-even-lift/dist/';
   }
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-    'img-src': "'self'",
-    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    'img-src': "'self' http://www.google-analytics.com/",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com ", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    'script-src': "'self' 'unsafe-inline' http://www.google-analytics.com/analytics.js ",
     'media-src': "'self'"
   };
 
