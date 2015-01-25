@@ -2,7 +2,7 @@ body {
   font-weight: 200;
 }
 
-.nl-form {
+.vertical-center {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -16,6 +16,20 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
 
-  width: 100%;
+.full-width {
+  width: 90%;
+}
+
+@media screen and (max-width: 45em) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  h1 {
+    font-size: 1.5em;
+  }
 }

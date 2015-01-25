@@ -1,0 +1,23 @@
+<div class="clearfix text-center">
+  <form id="nl-form" class="nl-form vertical-center full-width">
+    I
+    <select name="lift">
+      <option value="deadlift" selected>deadlift</option>
+      <option value="bench">bench</option>
+      <option value="squat">squat</option>
+      <option value="press">press</option>
+      <option value="curl">curl</option>
+    </select>
+    <input type="number" name="weight" value="1" placeholder="1" min="1" max="1500" />
+    <select name="unit">
+      <option value="kg" selected>kg</option>
+      <option value="lbs">lbs</option>
+    </select>
+    <div class="nl-submit-wrap">
+      <button class="button" type="submit">What do I even lift?</button>
+    </div>
+    <div class="nl-overlay"></div>
+  </form>
+</div>
+
+{{outlet}}

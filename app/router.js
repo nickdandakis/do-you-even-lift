@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  
+  this.route("deadlift", {path: "deadlift/:weight/:unit"});
 });
 
 export default Router;

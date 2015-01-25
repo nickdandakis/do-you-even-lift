@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = './';
+    ENV.baseURL = '/do-you-even-lift/dist/';
   }
 
   ENV.contentSecurityPolicy = {
