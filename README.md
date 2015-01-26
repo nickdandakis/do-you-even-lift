@@ -13,13 +13,13 @@ soup = BeautifulSoup(page)
 
 data = []
 for i, node in enumerate(soup.select("tr")):
-if(i > 5):
-mammal = node.find("a").string
-weight = int(node.findAll("td")[1].string.replace(",",""))
-data.append({"mammal": mammal, "weight": weight})
+    if(i > 5):
+        mammal = node.find("a").string
+        weight = int(node.findAll("td")[1].string.replace(",",""))
+        data.append({"mammal": mammal, "weight": weight})
 
 with open('data.json', 'w') as outfile:
-json.dump(data, outfile)
+    json.dump(data, outfile)
 ```
 
 This is purely to learn Ember and shipping an MVP, so it'll always be a public work in progress.
